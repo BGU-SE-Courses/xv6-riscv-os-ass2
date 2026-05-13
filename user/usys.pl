@@ -40,3 +40,4 @@ entry("lcg_srand");
 entry("lcg_rand");
 entry("setgid");
 entry("getgid");
+entry("israeli_create");

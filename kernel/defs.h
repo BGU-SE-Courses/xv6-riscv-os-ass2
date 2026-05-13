@@ -192,3 +192,9 @@ void virtio_disk_intr(void);
 void lcg_init(void);
 void lcg_srand(uint);
 uint lcg_rand(void);
+
+// israeli.c
+void proc_setgid(int);
+int proc_getgid(void);
+void israeli_lock_init(void);
+int israeli_create(int);

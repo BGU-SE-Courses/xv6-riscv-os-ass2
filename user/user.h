@@ -26,6 +26,7 @@ void lcg_srand(unsigned int seed);
 unsigned int lcg_rand(void);
 void setgid(int gid);
 int getgid(void);
+int israeli_create(int favoritism);
 
 // ulib.c
 int stat(const char *, struct stat *);

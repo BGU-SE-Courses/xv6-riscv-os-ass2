@@ -5,6 +5,7 @@
 #include "memlayout.h"
 #include "spinlock.h"
 #include "proc.h"
+#include "syscall.h"
 
 uint64
 sys_exit(void)
@@ -120,4 +121,12 @@ sys_setgid(void)
   argint(0, &gid);
   proc_setgid(gid);
   return 0;
+}
+
+uint64
+sys_israeli_create(void)
+{
+  int favoritism;
+  argint(0, &favoritism);
+  return (uint64)israeli_create(favoritism);
 }
