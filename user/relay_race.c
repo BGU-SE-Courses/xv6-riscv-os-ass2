@@ -42,22 +42,22 @@ int main(void)
             {
                 israeli_acquire(lock_id);
 
-                // Critical section: increment our team's score
+                // Race already over? Just release and exit.
+                if (team_race_winner() >= 0)
+                {
+                    israeli_release(lock_id);
+                    exit(0);
+                }
+
+                // Race still on — increment and print.
                 int new_score = team_score_inc(team);
 
-                printf("Runner %d (Team %d) acquired the baton\n",
-                       getpid(), team);
+                printf("Runner %d (Team %d) acquired the baton\n", getpid(), team);
                 printf("Team %d score = %d\n", team, new_score);
 
                 israeli_release(lock_id);
 
-                // Has any team won
-                if (team_race_winner() >= 0)
-                {
-                    exit(0);
-                }
-
-                sleep(1); // brief pause
+                sleep(1);
             }
         }
     }
