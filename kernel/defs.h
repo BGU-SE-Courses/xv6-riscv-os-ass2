@@ -201,3 +201,9 @@ int israeli_create(int);
 int israeli_destroy(int);
 int israeli_acquire(int);
 int israeli_release(int);
+
+// team_score.c
+void team_score_init(void);
+void team_race_reset(int);
+int team_score_inc(int);
+int team_race_winner(void);

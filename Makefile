@@ -30,7 +30,9 @@ OBJS = \
   $K/plic.o \
   $K/virtio_disk.o \
   $K/lcg.o \
-  $K/israeli_lock.o
+  $K/israeli_lock.o \
+  $K/team_score.o
+
 
 # riscv64-unknown-elf- or riscv64-linux-gnu-
 # perhaps in /opt/riscv/bin
@@ -135,7 +137,8 @@ UPROGS=\
 	$U/_wc\
 	$U/_zombie\
 	$U/_lcgtest\
-	$U/_locktest
+	$U/_locktest\
+	$U/_relay_race
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)

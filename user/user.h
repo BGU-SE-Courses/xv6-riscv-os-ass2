@@ -30,6 +30,9 @@ int israeli_create(int favoritism);
 int israeli_destroy(int lock_id);
 int israeli_acquire(int lock_id);
 int israeli_release(int lock_id);
+void team_race_reset(int target);
+int team_score_inc(int team_id);
+int team_race_winner(void);
 
 // ulib.c
 int stat(const char *, struct stat *);

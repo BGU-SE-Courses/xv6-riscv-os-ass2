@@ -28,6 +28,7 @@ void main()
     iinit();             // inode table
     lcg_init();          // random number generator task 0
     israeli_lock_init(); // israeli locks task 1
+    team_score_init();   // team scoring system task 2
     fileinit();          // file table
     virtio_disk_init();  // emulated hard disk
     userinit();          // first user process

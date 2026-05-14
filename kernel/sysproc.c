@@ -154,3 +154,26 @@ sys_israeli_release(void)
   argint(0, &lock_id);
   return (uint64)israeli_release(lock_id);
 }
+
+uint64
+sys_team_race_reset(void)
+{
+  int target;
+  argint(0, &target);
+  team_race_reset(target);
+  return 0;
+}
+
+uint64
+sys_team_score_inc(void)
+{
+  int team_id;
+  argint(0, &team_id);
+  return (uint64)team_score_inc(team_id);
+}
+
+uint64
+sys_team_race_winner(void)
+{
+  return (uint64)team_race_winner();
+}
