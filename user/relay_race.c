@@ -57,7 +57,7 @@ int main(void)
 
                 israeli_release(lock_id);
 
-                sleep(1);
+                sleep(2);
             }
         }
     }
