@@ -198,3 +198,6 @@ void proc_setgid(int);
 int proc_getgid(void);
 void israeli_lock_init(void);
 int israeli_create(int);
+int israeli_destroy(int);
+int israeli_acquire(int);
+int israeli_release(int);

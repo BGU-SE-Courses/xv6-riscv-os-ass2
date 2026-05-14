@@ -41,3 +41,6 @@ entry("lcg_rand");
 entry("setgid");
 entry("getgid");
 entry("israeli_create");
+entry("israeli_destroy");
+entry("israeli_acquire");
+entry("israeli_release");
